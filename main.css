@@ -1,0 +1,383 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+/* .red-hat-display-<uniquifier> {
+  font-family: "Red Hat Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+:root {
+  --main-color: #2e5e50;
+  --decor-color: #6cc686;
+  --highlighting-color: #99f0b2;
+}
+
+nav {
+  /* positioning */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  /* flex */
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  /* dimension */
+  width: 15vw;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 10px;
+  background-color: #2e5e50;
+  color: white;
+}
+
+nav span {
+  color: rgba(255, 255, 255, 0.562);
+}
+
+ul.nav-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  margin-bottom: 6px;
+}
+
+ul.nav-items > li {
+  list-style: none;
+  color: white;
+  font-size: 1.1em;
+  text-align: center;
+  background-color: var(--decor-color);
+  /* dimesion */
+  width: 90%;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 17px;
+  /* flex */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /*  */
+  transition: 0.4s;
+}
+
+ul.nav-items > li:hover {
+  border: 1px solid rgb(172, 255, 172);
+  cursor: pointer;
+  width: 101%;
+}
+
+ul.nav-items > li > img {
+  margin-right: 14px;
+  width: 30px;
+}
+body {
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  width: 990px;
+  margin-top: 40px;
+  margin-left: 300px
+;
+}
+
+section#client {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+div.input-client {
+  display: flex;
+  align-items: center;
+}
+
+div.input-client input {
+  width: 500px;
+  margin-left: 200px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 22px;
+  border: none;
+}
+
+#searchBtn {
+  padding: 0px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--decor-color);
+  padding: 4px;
+}
+#searchBtn:hover {
+  cursor: pointer;
+  background-color: #99f0b2;
+
+  padding: 5px;
+}
+
+ #deleteAll {
+  padding: 0px;
+  width: 60px;
+  height: 40px;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+ #deleteAll:hover {
+  cursor: pointer;
+  width: 61px;
+  height: 41px;
+
+}
+
+div#tableContainer {
+  display: flex;
+  justify-content: center;
+  /*  */
+  max-height: 300px;
+  border-radius: 12px;
+  border: 1px solid black;
+  width: 800px;
+
+  margin: auto;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--decor-color) white;
+}
+
+table {
+  border-spacing: 0;
+  height: 90px;
+  background-color: white;
+  overflow: hidden;
+  border: none;
+  border-radius: 12px;
+  /*  */
+  font-size: 13px;
+  text-align: center;
+  width: 60vw;
+}
+table th {
+  background-color: var(--decor-color);
+  color: rgb(93, 93, 93);
+  border: 1px solid rgb(119, 118, 118);
+  padding: 5px;
+}
+
+table td {
+  padding: 6px 10px 6px 10px;
+}
+
+th#cpf {
+  width: 150px;
+}
+th#cliente {
+  width: 140px;
+}
+th#veiculo {
+  width: 160px;
+}
+th#anoModelo {
+  width: 140px;
+}
+th#placa {
+  width: 140px;
+}
+th#status {
+  width: 180px;
+}
+
+div#form {
+  width: 800px;
+  padding: 12px;
+  margin: auto;
+}
+
+div#form form {
+  margin-top: 30px;
+  padding: 30px;
+  border-radius: 15px;
+  /*  */
+  display: flex;
+  background-color: #8ab9983d;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+div#form form input {
+  background-color: white;
+  border: 1px solid var(--main-color);
+  border-radius: 12px;
+  margin: 3px;
+  padding: 10px;
+  width: 200px;
+}
+div#form form label {
+  color: var(--main-color);
+}
+
+div#form div {
+  display: flex;
+  flex-flow: column;
+}
+
+div#btnsCRUD {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 800px;
+  margin: auto;
+}
+
+div#btnsCRUD input {
+  border-radius: 12px;
+  padding: 25px;
+  margin-right: 20px;
+  border: none;
+  width: 200px;
+}
+div#btnsCRUD input:hover {
+  cursor: pointer;
+}
+div#btnsCRUD input#cadastrar {
+  background-color: var(--decor-color);
+}
+div#btnsCRUD input#cadastrar:hover {
+  background-color: #4aa062;
+}
+div#btnsCRUD input#editar {
+  background-color: rgba(255, 221, 27, 0.571);
+  display: none;
+}
+div#btnsCRUD input#excluir {
+  background-color: rgb(228, 127, 127);
+  display: none;
+}
+
+section#clienteCardContainer {
+  /* background-color: var(--main-color); */
+  width: 800px;
+  border-radius: 12px;
+}
+div.carInfo {
+  width: 700px;
+  background-color: #2e5e504f;
+  border-radius: 12px 12px 0px 0px;
+  margin: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+div.carInfo ul {
+  margin-left: 30px;
+  font-size: 19px;
+}
+div.carminiTitle {
+  margin: 30px;
+}
+div.carminiTitle h4 {
+  font-size: 20px;
+}
+div.carminiTitle img {
+  width: 250px;
+  border-radius: 12px;
+}
+
+div.serviçoCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #a1cfaef8;
+  border-radius: 12px;
+  padding: 20px 30px 20px 30px ;
+  margin: auto;
+}
+div.serviçoCard h4 {
+  font-size: 24px;
+}
+div.serviçoCard ul {
+  margin-top: 5px;
+  margin-left: 33px;
+}
+div.serviçoCard span {
+  font-size: 24px;
+  font-weight: bold;
+
+div.profissionaisCard {
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+div.profissionaisCard h4 {
+  margin-top: -10px;
+}
+div.profissionaisCard h3 {
+  margin-bottom: -10px;
+}
+div.profissionaisCard div {
+  display: flex;
+  flex-flow: column;
+}
+div.profissionaisCard div > img {
+  width: 250px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 9px;
+}
+
+/* 
+  <section id="clienteCardContainer">
+        <div class="carInfo">
+          <div .class="carminiTitle">
+            <img src="imgs/fordka.jfif" alt="" />
+            <h4>Ford KA 2009</h4>
+          </div>
+            <ul>
+              <li>FORD</li>
+              <li>FORD KA LTZ</li>
+              <li>FLEX</li>
+              <li>ZETEC-ROCAM 1.6</li>
+              <li>HATCH COMPACTO</li>
+            </ul>
+          </div>
+         <div class="serviçoCard">
+            <h4>Serviços</h4>
+            <ul>
+              <li>Freio 1L</li>
+              <li>Sapata</li>
+              <li>Oleo Znex 23WD</li>
+              <li>Alinhamento Roda</li>
+             <span>TOTAL: R$24500</span>
+            </ul>
+          </div>
+          <div class="atendenteCard">
+            <img
+              src="imgs/retrato-de-homem-branco-isolado_53876-40306.avif"
+              alt=""
+            />
+            <h4>Jeferson</h4>
+          </div>
+          <div class="mecanicoCard">
+            <img src="imgs/dia-do-mecanico.webp" alt="" />
+            <h4>Cesar</h4>
+          </div>
+        </div>
+      </section>
+
+*/

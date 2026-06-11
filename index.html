@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>White Label</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="nav-container">
+        <ul class="nav-items">
+          <img class="logo-icon" src="imgs/System-Logo.png" alt="System-Logo" />
+          <h3>Auto Car System</h3>
+          <p style="margin-bottom: 20px">Welcome to your smart panel!</p>
+          <li><img src="imgs/dash-icon-report.webp" alt="" /> Clientes</li>
+          <li><img src="imgs/dash-icon-dashboard.jpg" alt="" /> Dashboard</li>
+          <li><img src="imgs/icon-orçamento.png" alt="" /> Orçamentos</li>
+          <li><img src="imgs/dash-icon-analysis.png" alt="" /> Serviços</li>
+          <li><img src="imgs/dash-icon-support.jpg" alt="" /> Suporte</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="client">
+        <div class="input-client">
+          <input type="text" name="CPF" placeholder="CPF" id="search" />
+          <img id="searchBtn" src="imgs/icon-search.png" alt="search-btn" />
+          <img id="deleteAll" src="imgs/delete-btnn.png" alt="delete-btn" />
+        </div>
+        <section id="formTableContainer">
+          <div id="tableContainer">
+            <table border="1">
+              <thead>
+                <th id="cpfTitle">CPF</th>
+                <th id="clienteTitle">CLIENTE</th>
+                <th id="veiculoTitle">VEÍCULO</th>
+                <th id="anoModeloTitle">ANO/MODELO</th>
+                <th id="placaTitle">PLACA</th>
+                <th id="statusTitle">STATUS</th>
+                <th id="statusTitle">DATA</th>
+                <th id="statusTitle">SERVIÇOS/PEÇAS</th>
+                <th id="statusTitle">ORÇAMENTO</th>
+                <!-- <th id="statusTitle">ATENDENTE</th> -->
+                <!-- <th id="statusTitle">MECANICO</th> -->
+              </thead>
+              <tbody id="tableClientes">
+                <!--  -->
+              </tbody>
+            </table>
+          </div>
+          <div id="form">
+            <form>
+              <div class="cpf">
+                <label for="CPF">CPF</label>
+                <input type="text" id="CPF" name="CPF" />
+              </div>
+              <div class="cliente">
+                <label for="CLIENTE">CLIENTE</label>
+                <input type="text" name="CLIENTE" id="CLIENTE" />
+              </div>
+              <div class="telefone">
+                <label for="telefone">TEL.</label>
+                <input type="text" name="telefone" id="telefone" />
+              </div>
+              <div class="veículo">
+                <label for="veiculo">VEÍCULO</label>
+                <input type="text" name="veiculo" id="veiculo" />
+              </div>
+              <div class="anoModelo">
+                <label for="ano">ANO/MODELO</label>
+                <input type="text" name="anoModelo" id="ano" />
+              </div>
+              <div class="PLACA">
+                <label for="PLACA">PLACA</label>
+                <input type="text" name="PLACA" id="PLACA" />
+              </div>
+              <div class="status">
+                <label for="Status">STATUS</label>
+                <input type="text" name="Status" id="Status" />
+              </div>
+              <div class="serviçosPeças">
+                <label for="serviçosPeças">SERVIÇOS/PEÇAS</label>
+                <input type="text" name="serviçosPeças" id="serviçosPeças" />
+              </div>
+              <div class="atendente">
+                <label for="atendente">ATENDENTE</label>
+                <input type="text" name="atendente" id="atendente" />
+              </div>
+              <div class="MECÂNICO">
+                <label for="MECÂNICO">MECÂNICO</label>
+                <input type="text" name="MECÂNICO" id="MECANICO" />
+              </div>
+              <div class="data">
+                <label for="data">DATA</label>
+                <input type="date" name="data" id="data" />
+              </div>
+              <div class="Orçamento">
+                <label for="Orçamento">ORÇAMENTO</label>
+                <input type="text" name="Orçamento" id="Orçamento" />
+              </div>
+            </form>
+          </div>
+          <div id="btnsCRUD">
+            <input type="button" id="cadastrar" value="CADASTRAR" />
+            <input type="button" id="editar" value="EDITAR" />
+            <input type="button" id="excluir" value="EXCLUIR" />
+          </div>
+        </section>
+      </section>
+      <section id="clienteCardContainer">
+        <!-- <div class="carInfo">
+          <div class="carminiTitle">
+            <img src="imgs/fordka.jfif" alt="" />
+            <h4>Ford KA 2009</h4>
+          </div>
+            <ul>
+              <li>FORD</li>
+              <li>FORD KA LTZ</li>
+              <li>FLEX</li>
+              <li>ZETEC-ROCAM 1.6</li>
+              <li>HATCH COMPACTO</li>
+            </ul>
+          </div>
+          <div class="serviçoCard">
+            <div>
+            <h4>Serviços:</h4>
+            <ul>
+              <li>Freio 1L</li>
+              <li>Sapata</li>
+              <li>Oleo Znex 23WD</li>
+              <li>Alinhamento Roda</li>
+            </ul>
+            </div>
+            <span>TOTAL: R$24500</span>
+          </div>
+          <div style="display: none;" class="profissionaisCard">
+          <div class="atendenteCard">
+            <h3>Atendente</h3>
+            <img
+              src="imgs/retrato-de-homem-branco-isolado_53876-40306.avif"
+              alt=""
+            />
+            <h4>Jeferson</h4>
+          </div>
+          <div class="mecanicoCard">
+              <h3>Mecanico</h3>
+            <img src="imgs/dia-do-mecanico.webp" alt="" />
+            <h4>Cesar</h4>
+          </div>
+        </div>
+        </div> -->
+      </section>
+    </main>
+  </body>
+  <script type="module" src="script.js"></script>
+</html>
