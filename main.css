@@ -91,8 +91,7 @@ body {
 main {
   width: 990px;
   margin-top: 40px;
-  margin-left: 300px
-;
+  margin-left: 300px;
 }
 
 section#client {
@@ -129,18 +128,17 @@ div.input-client input {
   padding: 5px;
 }
 
- #deleteAll {
+#deleteAll {
   padding: 0px;
   width: 60px;
   height: 40px;
   border-radius: 50%;
   transition: 0.2s;
 }
- #deleteAll:hover {
+#deleteAll:hover {
   cursor: pointer;
   width: 61px;
   height: 41px;
-
 }
 
 div#tableContainer {
@@ -304,7 +302,7 @@ div.serviçoCard {
   justify-content: space-between;
   background-color: #a1cfaef8;
   border-radius: 12px;
-  padding: 20px 30px 20px 30px ;
+  padding: 20px 30px 20px 30px;
   margin: auto;
 }
 div.serviçoCard h4 {
@@ -317,7 +315,7 @@ div.serviçoCard ul {
 div.serviçoCard span {
   font-size: 24px;
   font-weight: bold;
-
+}
 div.profissionaisCard {
   background-color: orange;
   display: flex;
